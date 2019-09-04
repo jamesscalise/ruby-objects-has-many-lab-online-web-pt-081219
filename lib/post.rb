@@ -1,9 +1,19 @@
 class Post
-  attr_accessor :author, :title
+  attr_accessor :title
   @@all = []
   def initialize(name)
     @title = name
+    @author = nil
     save
+  end
+  
+  def author
+    @author
+  end
+  
+  def author=(new_artist)
+    @author = new_artist
+    new_artist.posts << self
   end
   
   def save
@@ -13,4 +23,17 @@ class Post
   def self.all
     @@all
   end
+  
+  def author_name
+    if @artist != nil
+      @author.name
+    else
+      nil
+    end
+  end
+  
+  def self.post_count
+    @@all.length
+  end
+  
 end
