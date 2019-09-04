@@ -6,11 +6,12 @@ class Song
   @@all = []
   def initialize(name)
     @name = name
+    @artist = nil
     save
   end
   
   def artist
-    artist != nil? @artist : nil
+    @artist
   end
   
   def artist=(new_artist)
