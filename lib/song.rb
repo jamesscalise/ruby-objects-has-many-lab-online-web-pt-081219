@@ -10,7 +10,7 @@ class Song
     save
   end
   
-  def artist(artist)
+  def artist
    @artist = artist
   end
   
