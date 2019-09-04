@@ -2,7 +2,7 @@ require_relative "../lib/artist.rb"
 
 
 class Song
-  attr_accessor :name
+  attr_accessor :artist_name
   attr_reader :artist
   @@all = []
   def initialize(name)
@@ -24,5 +24,9 @@ class Song
   
   def self.all
     @@all
+  end
+  
+  def artist_name
+    @artist.name
   end
 end
